@@ -3,11 +3,12 @@ var querystring = require('querystring');
 
 Accela = function(options) {
 
-	var ENDPOINT = 'https://apis.accela.com/';
+	var ENDPOINT = 'https://apis.accela.com';
 
 	//Public methods.
 	function _get(path, params, auth_type, callback) {
 		var url = ENDPOINT + path + '?' + querystring.stringify(params);
+
 		var options = {
 			url: url,
 			headers: setAuthType(auth_type)
@@ -15,16 +16,45 @@ Accela = function(options) {
 		makeRequest(options, callback);
 	}
 
-	function _post() {
-
+	function _post(path, params, body, auth_type, callback) {
+		var url = ENDPOINT + path;
+		if(params) {
+			url += '?' + querystring.stringify(params);
+		}
+		var options = {
+			url: url,
+			method: 'POST',
+			body: body,
+			headers: setAuthType(auth_type)
+		}
+		makeRequest(options, callback);
 	}
 
-	function _put() {
-
+	function _put(path, params, body, auth_type, callback) {
+		var url = ENDPOINT + path;
+		if(params) {
+			url += '?' + querystring.stringify(params);
+		}
+		var options = {
+			url: url,
+			method: 'PUT',
+			body: body,
+			headers: setAuthType(auth_type)
+		}
+		makeRequest(options, callback);
 	}
 
-	function _delete() {
-
+	function _delete(path, params, auth_type, callback) {
+		var url = ENDPOINT + path;
+		if(params) {
+			url += '?' + querystring.stringify(params);
+		}
+		var options = {
+			url: url,
+			method: 'DELETE',
+			headers: setAuthType(auth_type)
+		}
+		makeRequest(options, callback);
 	}
 
 	// Private method to make API call.
