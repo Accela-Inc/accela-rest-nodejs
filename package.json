@@ -1,0 +1,11 @@
+{
+  "name": "accela-rest-nodejs",
+  "version": "0.0.1",
+  "description": "A Node,js module for working with the Accela Construct API.",
+  "main": "index.js",
+  "dependencies": {
+    "request": "latest",
+    "querystring": "latest"
+  },
+  "author": "Mark J. Headd"
+}
