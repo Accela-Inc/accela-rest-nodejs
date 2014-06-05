@@ -32,4 +32,4 @@ owners.getOwners({fullName: 'Smith'}, function(error, response, body) {
 });
 ```
 
-Additional examples available in the [samples](tree/master/samples) directory.
+Additional examples available in the [samples](../../tree/master/samples) directory.
