@@ -1,8 +1,12 @@
 {
-  "name": "accela-rest-nodejs",
-  "version": "0.0.1",
-  "description": "A Node,js module for working with the Accela Construct API.",
+  "name": "accela-construct",
+  "version": "0.0.2",
+  "description": "A Node.js module for working with the Accela Construct API.",
   "main": "index.js",
+  "repository" : { 
+    "type":"git",
+    "url":"https://github.com/Accela-Inc/accela-rest-nodejs" 
+  },
   "dependencies": {
     "request": "latest",
     "querystring": "latest"
