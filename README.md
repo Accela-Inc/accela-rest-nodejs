@@ -15,7 +15,7 @@ npm install accela-construct
 ## Example
 
 ```javascript
-require('accela');
+require('accela-construct');
 var config = require('./path/to/config');
 
 var owners = Owners(config.config);
