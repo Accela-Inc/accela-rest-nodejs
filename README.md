@@ -21,7 +21,7 @@ var config = require('./path/to/config');
 var owners = Owners(config.config);
 owners.getOwners({fullName: 'Smith'}, function(error, response, body) {
 	if (!error && response.statusCode == 200) {
-		var response =JSON.parse(body);
+		var response = JSON.parse(body);
         for (var i=0; i<response.result.length; i++) {
         	console.log(response.result[i].fullName);
         }
@@ -32,4 +32,4 @@ owners.getOwners({fullName: 'Smith'}, function(error, response, body) {
 });
 ```
 
-Additional examples availalbe in the samples directory.
+Additional examples available in the [samples](tree/master/samples) directory.
