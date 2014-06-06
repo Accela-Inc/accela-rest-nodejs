@@ -14,6 +14,6 @@ accela.owners.getOwners({fullName: 'Smith'}, function (error, response, body) {
         }
     }
     else {
-        console.log('An error occured: ' + response.statusCode);
+        console.log('An error occurred: ' + response.statusCode);
     }
 });

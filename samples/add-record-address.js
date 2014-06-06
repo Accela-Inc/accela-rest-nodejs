@@ -19,7 +19,7 @@ accela.records.createRecordAddresses({recordID: 'ISLANDTON-14CAP-00000-0003W'}, 
         console.log(body);
     }
     else {
-        console.log('An error occured: ' + response.statusCode);
+        console.log('An error occurred: ' + response.statusCode);
     }
 });
 

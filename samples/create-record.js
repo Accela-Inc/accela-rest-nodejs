@@ -26,7 +26,7 @@ accela.records.createRecord(null, JSON.stringify(record), function (error, respo
         console.log(body);
     }
     else {
-        console.log('An error occured: ' + response.statusCode);
+        console.log('An error occurred: ' + response.statusCode);
     }
 });
 

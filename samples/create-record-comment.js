@@ -17,7 +17,7 @@ accela.records.createRecordComments({recordID: 'ISLANDTON-14CAP-00000-0003V'}, J
         console.log(body);
     }
     else {
-        console.log('An error occured: ' + response.statusCode);
+        console.log('An error occurred: ' + response.statusCode);
     }
 });
 

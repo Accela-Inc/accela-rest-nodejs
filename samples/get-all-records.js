@@ -11,7 +11,7 @@ accela.records.getAllRecords({ module: 'ServiceRequest', limit: 2 }, function (e
         console.log(body);
     }
     else {
-        console.log('An error occured: ' + response.statusCode);
+        console.log('An error occurred: ' + response.statusCode);
     }
 });
 

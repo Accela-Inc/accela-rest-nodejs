@@ -14,6 +14,6 @@ accela.records.getAllRecordTypes({module: 'ServiceRequest'}, function (error, re
         }
     }
     else {
-        console.log('An error occured: ' + response.statusCode);
+        console.log('An error occurred: ' + response.statusCode);
     }
 });
