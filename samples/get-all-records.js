@@ -1,14 +1,17 @@
-require('../lib/records');
+var accela = require('./../lib/accela');
 var config = require('../config');
 
-var records = Records(config.config);
+accela.setup(config);
 
-records.getAllRecords({ module: 'ServiceRequest', limit: 2 }, function(error, response, body) {
-	if (!error && response.statusCode == 200) {
-		console.log(body);
+accela.records.getAllRecords({ module: 'ServiceRequest', limit: 2 }, function (error, response, body) {
+    if (error) {
+        return console.log(error);
+    }
+    else if (!error && response.statusCode == 200) {
+        console.log(body);
     }
     else {
-    	console.log('An error occured: ' + response.statusCode);
+        console.log('An error occured: ' + response.statusCode);
     }
 });
 
