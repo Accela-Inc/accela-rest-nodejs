@@ -1,21 +1,25 @@
-require('../lib/records');
+var accela = require('./../lib/accela');
 var config = require('../config');
 
-addresses = [
-	{
-		xCoordinate: -75.226024,
-		yCoordinate: 40.032275,
-		streetAddress: '123 Some Street, Philadelphia, PA 19127'
-	}
-]
+accela.setup(config);
 
-var records = Records(config.config);
-records.createRecordAddresses({recordID: 'ISLANDTON-14CAP-00000-0003W'}, JSON.stringify(addresses), function(error, response, body) {
-	if (!error && response.statusCode == 200) {
-		console.log(body);
+addresses = [
+    {
+        xCoordinate: -75.226024,
+        yCoordinate: 40.032275,
+        streetAddress: '123 Some Street, Philadelphia, PA 19127'
+    }
+];
+
+accela.records.createRecordAddresses({recordID: 'ISLANDTON-14CAP-00000-0003W'}, JSON.stringify(addresses), function (error, response, body) {
+    if (error) {
+        return console.log(error);
+    }
+    else if (response.statusCode == 200) {
+        console.log(body);
     }
     else {
-    	console.log('An error occured: ' + response.statusCode);
+        console.log('An error occurred: ' + response.statusCode);
     }
 });
 
@@ -29,4 +33,4 @@ records.createRecordAddresses({recordID: 'ISLANDTON-14CAP-00000-0003W'}, JSON.st
 //             "isSuccess": true
 //         }
 //     ]
-}
+//}

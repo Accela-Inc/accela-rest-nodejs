@@ -1,19 +1,23 @@
-require('../lib/records');
+var accela = require('./../lib/accela');
 var config = require('../config');
 
+accela.setup(config);
+
 var comment = [
-	{
-		text: "This is a another comment."
-	}
+    {
+        text: "This is a another comment."
+    }
 ]
 
-var records = Records(config.config);
-records.createRecordComments({recordID: 'ISLANDTON-14CAP-00000-0003V'}, JSON.stringify(comment), function(error, response, body) {
-	if (!error && response.statusCode == 200) {
-		console.log(body);
+accela.records.createRecordComments({recordID: 'ISLANDTON-14CAP-00000-0003V'}, JSON.stringify(comment), function (error, response, body) {
+    if (error) {
+        return console.log(error);
+    }
+    else if (response.statusCode == 200) {
+        console.log(body);
     }
     else {
-    	console.log('An error occured: ' + response.statusCode);
+        console.log('An error occurred: ' + response.statusCode);
     }
 });
 

@@ -1,28 +1,32 @@
-require('../lib/records');
+var accela = require('./../lib/accela');
 var config = require('../config');
 
+accela.setup(config);
+
 record = {
-	module: "ServiceRequest",
-	createdBy: "MDEVELOPER",
-	serviceProviderCode: "ISLANDTON",
-	type: {
-	    subType: "Graffiti",
-	    group: "ServiceRequest",
-	    text: "Graffiti",
-	    value: "ServiceRequest/Graffiti/Graffiti/NA",
-	    type: "Graffiti",
-	    module: "ServiceRequest"
-	},
-	description: "This is another test service request."
+    module: "ServiceRequest",
+    createdBy: "MDEVELOPER",
+    serviceProviderCode: "ISLANDTON",
+    type: {
+        subType: "Graffiti",
+        group: "ServiceRequest",
+        text: "Graffiti",
+        value: "ServiceRequest/Graffiti/Graffiti/NA",
+        type: "Graffiti",
+        module: "ServiceRequest"
+    },
+    description: "This is another test service request."
 }
 
-var records = Records(config.config);
-records.createRecord(null, JSON.stringify(record), function(error, response, body) {
-	if (!error && response.statusCode == 200) {
-		console.log(body);
+accela.records.createRecord(null, JSON.stringify(record), function (error, response, body) {
+    if (error) {
+        return console.log(error);
+    }
+    else if (response.statusCode == 200) {
+        console.log(body);
     }
     else {
-    	console.log('An error occured: ' + response.statusCode);
+        console.log('An error occurred: ' + response.statusCode);
     }
 });
 
