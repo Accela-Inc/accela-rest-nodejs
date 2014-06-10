@@ -5,29 +5,15 @@ accela.setup(config);
 
 var comment = [
     {
-        text: "This is a another comment."
+        text: "This is yet another comment."
     }
 ]
 
-accela.records.createRecordComments({recordID: 'ISLANDTON-14CAP-00000-0003V'}, JSON.stringify(comment), function (error, response, body) {
-    if (error) {
-        return console.log(error);
-    }
-    else if (response.statusCode == 200) {
-        console.log(body);
+accela.records.createRecordComments({recordID: 'ISLANDTON-14CAP-00000-0004Q'}, JSON.stringify(comment), function (response, error) {
+    if(!error) {
+        console.log(response);
     }
     else {
-        console.log('An error occurred: ' + response.statusCode);
+        console.log('An error ocurred: ' + error);
     }
 });
-
-// API RESPONSE
-//
-// {
-//     "status": 200,
-//     "result": [
-//         {
-//             "id": 1576205
-//         }
-//     ]
-// }

@@ -7,30 +7,22 @@ addresses = [
     {
         xCoordinate: -75.226024,
         yCoordinate: 40.032275,
-        streetAddress: '123 Some Street, Philadelphia, PA 19127'
+        streetStart: 123,
+        streetName: 'Some Street',
+        city: 'Philadelphia',
+        state: {
+             "text": 'PA',
+             "value": 'PA'
+           },
+        postalCode: '19134'
     }
-];
+]
 
-accela.records.createRecordAddresses({recordID: 'ISLANDTON-14CAP-00000-0003W'}, JSON.stringify(addresses), function (error, response, body) {
-    if (error) {
-        return console.log(error);
-    }
-    else if (response.statusCode == 200) {
-        console.log(body);
+accela.records.createRecordAddresses({recordID: 'ISLANDTON-14CAP-00000-0004Q'}, JSON.stringify(addresses), function (response, error) {
+    if(!error) {
+        console.log(response);
     }
     else {
-        console.log('An error occurred: ' + response.statusCode);
+        console.log('An error ocurred: ' + error);
     }
 });
-
-// API RESPONSE
-//
-// {
-//     "status": 200,
-//     "result": [
-//         {
-//             "id": 1000600758,
-//             "isSuccess": true
-//         }
-//     ]
-//}

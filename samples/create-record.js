@@ -15,59 +15,14 @@ record = {
         type: "Graffiti",
         module: "ServiceRequest"
     },
-    description: "This is another test service request."
+    description: "This is yet another test service request."
 }
 
-accela.records.createRecord(null, JSON.stringify(record), function (error, response, body) {
-    if (error) {
-        return console.log(error);
-    }
-    else if (response.statusCode == 200) {
-        console.log(body);
+accela.records.createRecord(null, JSON.stringify(record), function (response, error) {
+    if(!error) {
+        console.log(response);
     }
     else {
-        console.log('An error occurred: ' + response.statusCode);
+        console.log('An error ocurred: ' + error);
     }
 });
-
-// API RESPONSE
-//
-// {
-//   "status": 200,
-//   "result": {
-//     "publicOwned": false,
-//     "defendantSignature": false,
-//     "offenseWitnessed": false,
-//     "misdemeanor": false,
-//     "infraction": false,
-//     "booking": false,
-//     "module": "ServiceRequest",
-//     "createdBy": "MDEVELOPER",
-//     "statusDate": "2014-06-04 14:04:40",
-//     "serviceProviderCode": "ISLANDTON",
-//     "status": {
-//       "text": "Received",
-//       "value": "Received"
-//     },
-//     "description": "This is another test service request.",
-//     "type": {
-//       "subType": "Graffiti",
-//       "group": "ServiceRequest",
-//       "text": "Graffiti ",
-//       "category": "NA",
-//       "id": "ServiceRequest-Graffiti-Graffiti-NA",
-//       "value": "ServiceRequest/Graffiti/Graffiti/NA",
-//       "type": "Graffiti",
-//       "module": "ServiceRequest"
-//     },
-//     "id": "ISLANDTON-14CAP-00000-0003W",
-//     "initiatedProduct": "AV360",
-//     "customId": "SR-2014-00055",
-//     "recordClass": "COMPLETE",
-//     "trackingId": 259848171,
-//     "value": "14CAP-00000-0003W",
-//     "totalFee": 0,
-//     "totalPay": 0,
-//     "balance": 0
-//   }
-// }
