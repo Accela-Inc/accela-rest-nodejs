@@ -3,9 +3,9 @@ var config = require('../config');
 
 accela.setup(config);
 
-var options = { parcelNumber: 113060003, module: 'ServiceRequest' };
+var options = { module: 'ServiceRequest' };
 
-accela.search.records({ limit: 2 }, options, function (response, error) {
+accela.search.records({ expand: 'addresses' }, options, function (response, error) {
     if(!error) {
 		console.log(JSON.stringify(response));
 	}
