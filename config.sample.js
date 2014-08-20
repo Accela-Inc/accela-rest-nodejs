@@ -3,5 +3,8 @@ exports.config = config = {
 	app_secret: '',
 	access_token: '',
 	environment: 'TEST',
-	agency: 'Islandton'
+	agency: 'Islandton',
+	module: '',
+	username: '',
+	password: ''
 }

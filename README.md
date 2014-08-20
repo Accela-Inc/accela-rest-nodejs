@@ -2,7 +2,7 @@
 
 ## Installation
 
-npm install accela-construct
+    npm install accela-construct
 
 ## Provisioning an API test token:
 
