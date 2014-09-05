@@ -1,6 +1,6 @@
 {
   "name": "accela-construct",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A Node.js module for working with the Accela Construct API.",
   "main": "./lib/accela.js",
   "repository" : { 

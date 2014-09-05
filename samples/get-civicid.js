@@ -3,7 +3,7 @@ var config = require('../config');
 
 accela.setup(config);
 
-accela.civicid.getToken('get_owners', function(response, error) {
+accela.civicid.getToken('get_record get_records', function(response, error) {
 	if(!error) {
 		console.log(response);
 	}
