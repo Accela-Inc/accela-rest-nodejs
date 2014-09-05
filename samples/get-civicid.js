@@ -3,9 +3,12 @@ var config = require('../config');
 
 accela.setup(config);
 
-accela.civicid.getToken('get_record get_records', function(response, error) {
+var username = process.argv[2];
+var password = process.argv[3];
+
+accela.civicid.getToken(username, password, 'records', function(response, error) {
 	if(!error) {
-		console.log(response);
+		console.log(JSON.stringify(response));
 	}
 	else {
 		console.log(error);

@@ -4,7 +4,5 @@ exports.config = config = {
 	access_token: '',
 	environment: 'TEST',
 	agency: 'Islandton',
-	module: '',
-	username: '',
-	password: ''
+	module: ''
 }

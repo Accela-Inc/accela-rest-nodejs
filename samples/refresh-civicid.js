@@ -2,9 +2,9 @@ var accela = require('./../lib/accela');
 var config = require('../config');
 
 accela.setup(config);
-access_token = 'your-token-goes-here';
+token = 'your-token-goes-here';
 
-accela.civicid.refreshToken(access_token, function(response, error) {
+accela.civicid.refreshToken(token, function(response, error) {
 	if(!error) {
 		console.log(response);
 	}
