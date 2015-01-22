@@ -14,11 +14,12 @@ addresses = [
              "text": 'PA',
              "value": 'PA'
            },
-        postalCode: '19134'
+        postalCode: '19134',
+        isPrimary: true,
     }
 ]
 
-accela.records.createRecordAddresses({recordID: 'ISLANDTON-14CAP-00000-0004Q'}, JSON.stringify(addresses), function (response, error) {
+accela.records.createRecordAddresses({recordID: 'ISLANDTON-14CAP-00000-000E5'}, addresses, function (response, error) {
     if(!error) {
         console.log(response);
     }
