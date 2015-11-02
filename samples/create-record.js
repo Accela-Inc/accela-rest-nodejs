@@ -18,11 +18,11 @@ record = {
     description: "This is yet another test service request."
 }
 
-accela.records.createRecord(null, JSON.stringify(record), function (response, error) {
+accela.records.createRecord(null, record, function (error, response) {
     if(!error) {
         console.log(response);
     }
     else {
-        console.log('An error ocurred: ' + error);
+        console.log('An error ocurred. ' + error.message);
     }
 });

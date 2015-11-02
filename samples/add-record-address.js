@@ -19,11 +19,11 @@ addresses = [
     }
 ]
 
-accela.records.createRecordAddresses({recordID: 'ISLANDTON-14CAP-00000-000E5'}, addresses, function (response, error) {
+accela.records.createRecordAddresses({recordID: 'ISLANDTON-14CAP-00000-000E5'}, addresses, function (error, response) {
     if(!error) {
         console.log(response);
     }
     else {
-        console.log('An error ocurred: ' + error);
+        console.log('An error ocurred. ' + error.message);
     }
 });

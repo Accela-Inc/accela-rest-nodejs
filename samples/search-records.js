@@ -5,12 +5,12 @@ accela.setup(config);
 
 var options = {};
 
-accela.search.records({ expand: 'addresses' }, options, function (response, error) {
+accela.search.records({ expand: 'addresses' }, options, function (error, response) {
     if(!error) {
 		console.log(JSON.stringify(response));
 	}
 	else {
-		console.log('An error ocurred: ' + error);
+		console.log('An error ocurred. ' + error.message);
 	}
 
 });

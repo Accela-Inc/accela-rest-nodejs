@@ -5,12 +5,13 @@ accela.setup(config);
 
 var username = process.argv[2];
 var password = process.argv[3];
+var scope = process.argv[4];
 
-accela.civicid.getToken(username, password, 'records', function(response, error) {
+accela.civicid.getToken(username, password, scope, function (error, response) {
 	if(!error) {
-		console.log(JSON.stringify(response));
+		console.log(response.access_token);
 	}
 	else {
-		console.log(error);
+		console.log('An error ocurred. ' + error.message);
 	}
 });

@@ -9,11 +9,11 @@ var comment = [
     }
 ]
 
-accela.records.createRecordComments({recordID: 'ISLANDTON-14CAP-00000-0004Q'}, JSON.stringify(comment), function (response, error) {
+accela.records.createRecordComments({recordID: 'ISLANDTON-14CAP-00000-0004Q'}, JSON.stringify(comment), function (error, response) {
     if(!error) {
         console.log(response);
     }
     else {
-        console.log('An error ocurred: ' + error);
+        console.log('An error ocurred. ' + error.message);
     }
 });
