@@ -1,5 +1,5 @@
 var accela = require('./../lib/accela');
-var config = require('../config');
+var config = require('../config').config;
 
 accela.setup(config);
 

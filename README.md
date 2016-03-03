@@ -16,9 +16,9 @@
 
 ```javascript
 var accela = require('accela-construct');
-var config = require('./path/to/config');
+var config = require('./path/to/config').config;
 
-accela.setup(config.config);
+accela.setup(config);
 
 accela.owners.getOwners({fullName: 'Smith'}, function (response, error) {
     if(!error) {
