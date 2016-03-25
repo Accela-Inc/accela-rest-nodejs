@@ -1,6 +1,6 @@
 {
   "name": "accela-construct",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "A Node.js module for working with the Accela Construct API.",
   "main": "./lib/accela.js",
   "repository" : { 
@@ -8,9 +8,7 @@
     "url":"https://github.com/Accela-Inc/accela-rest-nodejs" 
   },
   "dependencies": {
-    "request": "latest",
-    "querystring": "latest",
-    "underscore": "latest"
+    "request": "latest"
   },
   "author": "Mark J. Headd"
 }

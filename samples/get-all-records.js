@@ -5,9 +5,9 @@ accela.setup(config);
 
 accela.records.getAllRecords({ module: 'ServiceRequest', limit: 3 }, function (error, response) {
     if(!error) {
-		console.log(response);
+		console.log(JSON.stringify(response));
 	}
 	else {
-		console.log('An error ocurred. ' + error.message);
+		console.log(JSON.stringify({ error: 'An error ocurred. ' + error.message }));
 	}
 });

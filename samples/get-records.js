@@ -9,6 +9,6 @@ accela.records.getRecords({id: record_id}, function (error, response) {
 		console.log(JSON.stringify(response));
 	}
 	else {
-		console.log('An error ocurred. ' + error.message);
+		console.log(JSON.stringify({ error: 'An error ocurred. ' + error.message }));
 	}
 });
