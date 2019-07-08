@@ -1,6 +1,6 @@
 {
   "name": "accela-construct",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A Node.js module for working with the Accela Construct API.",
   "main": "./lib/accela.js",
   "repository" : { 
@@ -10,5 +10,5 @@
   "dependencies": {
     "request": "latest"
   },
-  "author": "Mark J. Headd"
+  "author": "Ryan Davidson"
 }
